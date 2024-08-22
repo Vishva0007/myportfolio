@@ -23,6 +23,26 @@
       defer
       src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
     ></script>
+     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const experienceEntries = document.querySelectorAll('.experience-entry');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      experienceEntries.forEach(entry => {
+        observer.observe(entry);
+      });
+    });
+  </script>
 
     <!-- Todo: remove the below script once you finish your portfolio -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

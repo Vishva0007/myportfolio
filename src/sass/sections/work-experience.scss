@@ -1,103 +1,118 @@
-.experience {
-  padding: 50px 0;
-  background-color: #f9f9f9;
-
-  .heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 50px;
-    color: #333;
-
-    i {
-      margin-right: 10px;
-    }
-  }
-
-  .timeline {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 20px 0;
-    position: relative;
-
-    .container {
-      position: relative;
-      background-color: inherit;
-      width: calc(100% / 3);
-      padding: 20px;
-      min-width: 300px;
-      flex-shrink: 0;
-      
-      &:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: -25px;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 3px;
-        background-color: #333;
-      }
-
-      .content {
-        padding: 20px 30px;
-        background-color: white;
-        position: relative;
-        border-radius: 6px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-
-        .tag {
-          h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #333;
-          }
-        }
-
-        .desc {
-          h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #555;
-          }
-
-          p {
-            font-size: 1rem;
-            color: #777;
-          }
-        }
-      }
-    }
-
-    .container.left::before,
-    .container.right::before {
-      display: none;
-    }
-  }
-
-  .morebtn {
-    text-align: center;
-    margin-top: 30px;
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #555;
-      }
-
-      i {
-        margin-left: 10px;
-      }
-    }
-  }
+.work {
+  /* background: #010124; */
+  background: linear-gradient(to bottom, #000031, #00002c);
 }
+.work h2 {
+  color: #fff;
+  padding: 1rem;
+}
+.work .heading span {
+  color: rgb(255, 230, 0);
+}
+.work .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+}
+.work .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+}
+.work .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.work .box-container .box .content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 85%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+.work .box-container .box .content .tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  background: #ffd900;
+}
+.work .box-container .box .content .tag h3 {
+  font-size: 2rem;
+}
+.work .box-container .box:hover .content {
+  top: 25%;
+}
+.work .desc {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.work .desc p {
+  font-size: 1.5rem;
+}
+.work .desc .btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+.work .desc .btns .btn {
+  line-height: 0;
+  display: inline;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgb(12, 12, 12);
+  margin-right: 2rem;
+}
+.work .desc .btns .btn:hover {
+  background: #310ae0f5;
+}
+.work .viewall {
+  display: flex;
+  justify-content: center;
+}
+.work .viewall .btn {
+  position: relative;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: 0.5em;
+  transition: 0.5s;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
+  text-align: center;
+}
+.work .viewall .btn span {
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
+}
+.work .viewall .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.work .viewall .btn:hover {
+  background: #fff;
+  color: #000;
+}
+.work .viewall .btn:hover i {
+  transform: translateX(5px);
+}
+/* work section ends */

@@ -1,0 +1,76 @@
+/* **** Experience Section SCSS **** */
+#experience {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .experience-wrapper {
+    .row {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .experience-wrapper__text {
+        .experience-wrapper__text-title {
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 10px;
+          color: $secondary-color;
+        }
+
+        .experience-wrapper__info {
+          font-size: 16px;
+          color: #6c757d;
+
+          .experience-wrapper__info-title {
+            font-weight: 600;
+            color: $primary-color;
+          }
+
+          .experience-wrapper__info-time {
+            font-style: italic;
+          }
+        }
+      }
+
+      .experience-wrapper__details {
+        padding-left: 15px;
+        border-left: 3px solid $primary-color;
+
+        p {
+          font-size: 16px;
+          color: #495057;
+        }
+      }
+    }
+  }
+
+  .experience-divider {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #dee2e6;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  #experience {
+    .experience-wrapper {
+      .row {
+        .experience-wrapper__details {
+          padding-left: 0;
+          border-left: none;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
